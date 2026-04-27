@@ -48,8 +48,22 @@ def main():
         )
         print("AGENT ANALYSIS (Structured Data):")
         print(response.text)
+        print("\n" + "*"*40)
+        
+
+        # FinOps / Billing 
+        usage = response.usage_metadata
+        print("--- POST FLIGHT BILLING ---")
+        print(f"Input Tokens (Prompt):     {usage.prompt_token_count}")
+        print(f"Output Tokens (Generated): {usage.candidates_token_count}")
+        print(f"Total Tokens Billed:       {usage.total_token_count}")
+        print("="*40)
+
+
     except Exception as e:
         print(f"Agent execution failed: {e}")
+
+
 
 
 if __name__ == "__main__":
