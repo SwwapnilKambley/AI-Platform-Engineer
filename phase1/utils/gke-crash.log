@@ -1,0 +1,6 @@
+2026-04-27T14:32:01Z INFO  [kubelet] Starting container frontend-app
+2026-04-27T14:32:05Z ERROR [frontend-app] Panic: runtime error: invalid memory address or nil pointer dereference
+2026-04-27T14:32:05Z ERROR [frontend-app] goroutine 1 [running]:
+2026-04-27T14:32:05Z ERROR [frontend-app] main.connectDatabase(0x0, 0x0)
+2026-04-27T14:32:05Z ERROR [frontend-app] 	/app/main.go:42 +0x1a
+2026-04-27T14:32:06Z WARN  [kubelet] Container frontend-app failed liveness probe, will be restarted
